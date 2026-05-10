@@ -1,19 +1,24 @@
 {
   "name": "invoicforge",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5910",
+    "dev:frontend": "vite",
+    "dev:backend": "node server/index.js",
     "build": "vite build",
-    "serve": "vite preview --port 5910"
+    "start": "node server/index.cjs"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.0",
+    "gsap": "^3.12.4",
     "lucide-react": "^0.400.0",
-    "recharts": "^2.12.0"
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "better-sqlite3": "^11.0.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.1",

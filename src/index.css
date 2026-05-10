@@ -4,16 +4,25 @@
 
 @layer base {
   body { @apply bg-cream text-ink font-sans antialiased; }
-  h1, h2, h3 { @apply font-display; }
+  h1, h2, h3, h4 { @apply font-display; }
 }
 
 @layer components {
-  .card { @apply bg-white/70 backdrop-blur-sm border border-stone/50 rounded-xl shadow-sm; }
-  .btn { @apply px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 inline-flex items-center gap-2; }
-  .btn-primary { @apply btn bg-gold text-white hover:bg-gold/90 shadow-sm hover:shadow-md; }
-  .btn-secondary { @apply btn bg-ink text-cream hover:bg-ink/90; }
-  .btn-outline { @apply btn border border-stone/70 text-ink hover:bg-warm; }
-  .input { @apply w-full px-4 py-2.5 rounded-lg border border-stone/50 bg-white/80 text-ink placeholder:text-muted/60 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/30 transition-all; }
-  .label { @apply block text-sm font-medium text-ink/80 mb-1.5; }
+  .card { @apply bg-white/80 backdrop-blur-sm border border-stone/40 rounded-xl shadow-sm transition-shadow hover:shadow-md; }
+  .card-flat { @apply bg-white/80 backdrop-blur-sm border border-stone/40 rounded-xl; }
+  .btn { @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200; }
+  .btn-primary { @apply btn bg-gold text-white hover:bg-gold/90 shadow-sm hover:shadow-md active:scale-[0.98]; }
+  .btn-secondary { @apply btn bg-ink/90 text-cream hover:bg-ink; }
+  .btn-outline { @apply btn border border-stone/50 text-ink hover:bg-warm/80 hover:border-stone/70; }
+  .btn-ghost { @apply btn text-muted hover:text-ink hover:bg-warm/60; }
+  .btn-danger { @apply btn bg-red-50 text-red-600 hover:bg-red-100 border border-red-200; }
+  .input { @apply w-full px-4 py-2.5 rounded-lg border border-stone/40 bg-white text-ink placeholder:text-muted/50 focus:outline-none focus:border-gold/60 focus:ring-2 focus:ring-gold/10 transition-all text-sm; }
+  .input-error { @apply input border-red-300 focus:border-red-400 focus:ring-red-100; }
+  .label { @apply block text-sm font-medium text-ink/70 mb-1.5; }
   .badge { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium; }
+  .badge-paid { @apply badge bg-green-100 text-green-700; }
+  .badge-pending { @apply badge bg-amber-100 text-amber-700; }
+  .badge-overdue { @apply badge bg-red-100 text-red-700; }
+  .badge-draft { @apply badge bg-stone-100 text-stone-600; }
+  .skeleton { @apply bg-stone-200 animate-pulse rounded; }
 }
