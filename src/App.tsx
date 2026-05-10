@@ -1,0 +1,14 @@
+import { Routes, Route } from 'react-router-dom'
+import Landing from './pages/Landing'
+import Dashboard from './pages/Dashboard'
+import CreateInvoice from './pages/CreateInvoice'
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/create" element={<CreateInvoice />} />
+    </Routes>
+  )
+}
